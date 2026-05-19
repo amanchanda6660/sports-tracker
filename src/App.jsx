@@ -51,6 +51,8 @@ return (
       awayScore={game.competitions[0].competitors[1].score}
       status={game.status.type.detail}
       />)}
+
+      <button onClick= {() => fetchGames()}>Refresh Scores</button>
     </div>
 )
 }
