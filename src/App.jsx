@@ -45,7 +45,7 @@ return (
       />)
       }
 
-    <h2>Final</h2>
+    <h2 className='final'>Final</h2>
     {finalGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
