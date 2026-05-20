@@ -27,7 +27,7 @@ return (
   <div>
     <h1>Sports Tracker</h1>
 
-    <h2>Live</h2>
+    <h2 className='live'>Live</h2>
     {liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
@@ -36,7 +36,7 @@ return (
       />) 
 }   
 
-    <h2>Upcoming</h2>
+    <h2 className='upcoming'>Upcoming</h2>
     {upcomingGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 

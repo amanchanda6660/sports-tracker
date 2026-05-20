@@ -9,6 +9,7 @@
 }
 
 .scoreLine {
+    color: navy;
     font-size: 20px; 
     font-weight: bold;
     margin: 0 0 8px 0;

@@ -6,3 +6,21 @@
   border: none;
   cursor: pointer;
 }
+
+.live{
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 15px 30px;
+  padding: 15px 30px;
+  background-color: green;
+  color: white;
+}
+
+.upcoming{
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 15px 30px;
+  padding: 15px 30px;
+  background-color: white;
+  color: red;
+}
