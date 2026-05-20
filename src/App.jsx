@@ -25,7 +25,7 @@ const finalGames = games.filter((game) => game.status.type.state === "post")
 
 return (
   <div>
-    <h1>Sports Tracker</h1>
+    <h1 className='header'>Sports Tracker</h1>
 
     <h2 className='live'>Live</h2>
     {liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}

@@ -1,5 +1,10 @@
+.header{
+  font-family: sans-serif;
+  color:white;
+}
+
 .refreshButton{
-  background-color:blue;
+  background-color:teal;
   color: black;
   padding: 10px 20px;
   border-radius: 10px;
