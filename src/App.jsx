@@ -1,3 +1,4 @@
+import './App.css'
 import {useState, useEffect} from 'react'
 import GameCard from './components/GameCard'
 
@@ -24,7 +25,7 @@ const finalGames = games.filter((game) => game.status.type.state === "post")
 
 return (
   <div>
-    <h1>NBA Tracker</h1>
+    <h1>Sports Tracker</h1>
 
     <h2>Live</h2>
     {liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
@@ -52,7 +53,7 @@ return (
       status={game.status.type.detail}
       />)}
 
-      <button onClick= {() => fetchGames()}>Refresh Scores</button>
+      <button className='refreshButton' onClick={() => fetchGames()}>Refresh Scores</button>
     </div>
 )
 }
