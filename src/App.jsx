@@ -1,19 +1,29 @@
 import './App.css'
 import {useState, useEffect} from 'react'
 import GameCard from './components/GameCard'
+import LeagueTabs from './components/LeagueTabs'
 
 function App() {
   const [games, setGames] = useState ([])
+  const [selectedLeague, setLeague] = useState("nfl")
+  const leagueUrls ={
+    nba: "basketball/nba",
+    nfl: "football/nfl",
+    mlb: "baseball/mlb",
+    nhl: "hockey/nhl"
+  }
+  
 
+ 
   function fetchGames() {
-    fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard')
+    fetch(`https://site.api.espn.com/apis/site/v2/sports/${leagueUrls[selectedLeague]}/scoreboard`)
     .then(res => res.json())
     .then(data => setGames(data.events))
   }
 
   useEffect(() => {
     fetchGames()
-  }, [])
+  }, [selectedLeague])
 
 
 console.log(games)
@@ -26,6 +36,8 @@ const finalGames = games.filter((game) => game.status.type.state === "post")
 return (
   <div>
     <h1 className='header'>Sports Tracker</h1>
+
+     <LeagueTabs selectedLeague={selectedLeague} setLeague = {setLeague}/>
 
     <h2 className='live'>Live</h2>
     {liveGames.length > 0 ? liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
