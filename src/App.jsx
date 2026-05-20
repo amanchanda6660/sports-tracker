@@ -28,30 +28,31 @@ return (
     <h1 className='header'>Sports Tracker</h1>
 
     <h2 className='live'>Live</h2>
-    {liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
+    {liveGames.length > 0 ? liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
       awayScore={game.competitions[0].competitors[1].score}
-      status={game.status.type.detail}
-      />) 
+      status={game.status.type.detail} 
+      />) :<p>No live games right now.</p>
 }   
 
     <h2 className='upcoming'>Upcoming</h2>
-    {upcomingGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
+    {upcomingGames.length > 0 ? upcomingGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
       awayScore={game.competitions[0].competitors[1].score}
       status={game.status.type.detail}
-      />)
+      />) :<p>No upcoming games right now.</p>
       }
 
     <h2 className='final'>Final</h2>
-    {finalGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
+    {finalGames.length > 0 ? finalGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
       awayScore={game.competitions[0].competitors[1].score}
       status={game.status.type.detail}
-      />)}
+      />):<p>No games have ended.</p>
+    } 
 
       <button className='refreshButton' onClick={() => fetchGames()}>Refresh Scores</button>
     </div>
