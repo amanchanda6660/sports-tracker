@@ -1,16 +1,50 @@
-# React + Vite
+# Sports Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [sports-tracker-alpha.vercel.app](https://sports-tracker-alpha.vercel.app/)
 
-Currently, two official plugins are available:
+A live sports scores web app built with React. Fetches real-time data from the ESPN public API and displays live, upcoming, and final games across five major leagues.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Live scores with game status and broadcast info
+- Upcoming and final game results
+- Team logos, venue, win-loss records, and series info (for playoffs)
+- Switch between NBA, NFL, MLB, NHL, and UEFA Champions League
+- Manual refresh button to pull the latest scores
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite
+- ESPN public scoreboard API (no API key required)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Project Structure
+
+```
+src/
+├── App.jsx               # Main app — fetches games, filters by status
+├── components/
+│   ├── GameCard.jsx       # Individual game card (scores, logos, stats)
+│   ├── GameCard.module.css
+│   ├── LeagueTabs.jsx     # Sport selector tabs (NBA, NFL, MLB, NHL, UCL)
+│   └── LeagueTabs.module.css
+```
+
+## Supported Leagues
+
+| Tab | League |
+|-----|--------|
+| NBA | Basketball — NBA |
+| NFL | Football — NFL |
+| MLB | Baseball — MLB |
+| NHL | Hockey — NHL |
+| UCL | Soccer — UEFA Champions League |
