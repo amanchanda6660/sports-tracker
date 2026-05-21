@@ -10,7 +10,8 @@ function App() {
     nba: "basketball/nba",
     nfl: "football/nfl",
     mlb: "baseball/mlb",
-    nhl: "hockey/nhl"
+    nhl: "hockey/nhl",
+    ucl: "soccer/uefa.champions"
   }
   
 
@@ -47,6 +48,12 @@ return (
       status={game.status.type.detail}
       homeImage={game.competitions[0].competitors[0].team.logo}
       awayImage={game.competitions[0].competitors[1].team.logo}
+      broadcast={game.competitions[0].broadcast}
+      venue={game.competitions[0].venue.fullName}
+      typeOfGame={game.competitions[0].series?.title}
+      seriesRecord={game.competitions[0].series?.summary}
+      homeTeamRecord={game.competitions[0].competitors[0].records?.[0]?.summary}
+      awayTeamRecord={game.competitions[0].competitors[1].records?.[0]?.summary}
       />) :<p>No live games right now.</p>
 }   
 
@@ -58,6 +65,12 @@ return (
       status={game.status.type.detail}
       homeImage={game.competitions[0].competitors[0].team.logo}
       awayImage={game.competitions[0].competitors[1].team.logo}
+      broadcast={game.competitions[0].broadcast}
+      venue={game.competitions[0].venue.fullName}
+      typeOfGame={game.competitions[0].series?.title}
+      seriesRecord={game.competitions[0].series?.summary}
+      homeTeamRecord={game.competitions[0].competitors[0].records?.[0]?.summary}
+      awayTeamRecord={game.competitions[0].competitors[1].records?.[0]?.summary}
       />) :<p>No upcoming games right now.</p>
       }
 
@@ -69,6 +82,12 @@ return (
       status={game.status.type.detail}
       homeImage={game.competitions[0].competitors[0].team.logo}
       awayImage={game.competitions[0].competitors[1].team.logo}
+      broadcast={game.competitions[0].broadcast}
+      venue={game.competitions[0].venue.fullName}
+      typeOfGame={game.competitions[0].series?.title}
+      seriesRecord={game.competitions[0].series?.summary}
+      homeTeamRecord={game.competitions[0].competitors[0].records?.[0]?.summary}
+      awayTeamRecord={game.competitions[0].competitors[1].records?.[0]?.summary}
       />):<p>No games have ended.</p>
     } 
 

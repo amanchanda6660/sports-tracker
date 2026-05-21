@@ -5,8 +5,8 @@
     border: 8px solid #602b2b;
     border-radius: 10px;
     padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
+    max-width: 700px;
+    margin: 15px auto;
     background-color: rgb(14, 5, 44);
     font-family: sans-serif;
     gap: 16px;
@@ -43,6 +43,16 @@
     height: 40px;
     object-fit: cover;
 }
+
+.secondaryInformation{
+    display: flex;
+    align-items: center;
+    color:grey;
+    font-size: 10px;
+    object-fit:cover;
+    margin: 0;
+}
+
 
 @media (max-width: 600px) {
   .teamSection {

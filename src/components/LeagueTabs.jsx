@@ -9,6 +9,7 @@ function LeagueTabs({selectedLeague, setLeague}){
         <button className={styles.leagueButton} onClick={() => setLeague("nfl")} >NFL</button>
         <button className={styles.leagueButton} onClick={() => setLeague("mlb")} >MLB</button>
         <button className={styles.leagueButton} onClick={() => setLeague("nhl")} >NHL</button>
+        <button className={styles.leagueButton} onClick={() => setLeague("ucl")} >UCL</button>
         </div>
         
     )
