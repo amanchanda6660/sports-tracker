@@ -40,7 +40,7 @@ return (
 
      <LeagueTabs selectedLeague={selectedLeague} setLeague = {setLeague}/>
 
-    <h2 className='live'>Live</h2>
+    <h2 className='banner'>Live</h2>
     {liveGames.length > 0 ? liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
@@ -57,7 +57,7 @@ return (
       />) :<p>No live games right now.</p>
 }   
 
-    <h2 className='upcoming'>Upcoming</h2>
+    <h2 className='banner'>Upcoming</h2>
     {upcomingGames.length > 0 ? upcomingGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
@@ -74,7 +74,7 @@ return (
       />) :<p>No upcoming games right now.</p>
       }
 
-    <h2 className='final'>Final</h2>
+    <h2 className='banner'>Final</h2>
     {finalGames.length > 0 ? finalGames.map ((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 
