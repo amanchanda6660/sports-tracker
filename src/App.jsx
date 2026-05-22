@@ -40,7 +40,7 @@ return (
 
      <LeagueTabs selectedLeague={selectedLeague} setLeague = {setLeague}/>
 
-    <h2 className='banner'>Live</h2>
+    <h2 className='liveBanner'>Live</h2>
     {liveGames.length > 0 ? liveGames.map((game) => <GameCard key= {game.id} homeTeam={game.competitions[0].competitors[0].team.displayName}
       awayTeam={game.competitions[0].competitors[1].team.displayName}
       homeScore={game.competitions[0].competitors[0].score} 

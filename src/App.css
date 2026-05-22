@@ -21,6 +21,20 @@
   margin:15px auto;
 }*/
 
+
+.liveBanner{
+  color: green;
+  font-family:sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 8px 16px;
+  border-left: 3px solid green;
+  border-right: 3px solid green;
+  max-width: 700px;
+  margin: 16px auto 8px;
+}
+
 .banner {
   color: #aaa;
   font-family:sans-serif;
