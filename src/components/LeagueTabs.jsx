@@ -30,6 +30,11 @@ function LeagueTabs({selectedLeague, setLeague}){
            </img>
             UCL
             </button>
+         <button className={styles.leagueButton} onClick={() => setLeague("wc")} >
+            <img src='https://a.espncdn.com/i/leaguelogos/soccer/500/4.png' alt = "WC" className={styles.leagueLogo}>
+           </img>
+            WC26
+            </button>
         </div>
         
     )

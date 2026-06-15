@@ -11,7 +11,8 @@ function App() {
     nfl: "football/nfl",
     mlb: "baseball/mlb",
     nhl: "hockey/nhl",
-    ucl: "soccer/uefa.champions"
+    ucl: "soccer/uefa.champions",
+    wc: "soccer/fifa.world"
   }
   
 
